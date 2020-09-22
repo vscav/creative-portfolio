@@ -7,7 +7,7 @@ const useMeasure = () => {
   const [ro] = React.useState(
     () => new ResizeObserver(([entry]) => set(entry.contentRect))
   );
-  React.useEffect(() => (ro.observe(ref.current), ro.disconnect), []);
+  React.useEffect(() => (ro.observe(ref.current)), []);
   return [{ ref }, bounds];
 };
 

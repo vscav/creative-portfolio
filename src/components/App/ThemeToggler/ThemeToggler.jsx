@@ -7,7 +7,7 @@ const ThemeToggler = ({ toggleTheme }) => {
   const { title } = React.useContext(ThemeContext);
   return (
     <ToggleContainer>
-      <Toggle onClick={toggleTheme} />
+      <Toggle name="theme-control" onClick={toggleTheme} />
       <Tooltip
         active={title === "dark"}
         variant1={"Embrace the light side"}

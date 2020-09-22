@@ -16,13 +16,8 @@ const config2 = {
 };
 
 const Loading = () => {
-  // const unmounted = React.useRef(false);
-  // React.useEffect(() => {
-  //   return () => {
-  //     unmounted.current = true;
-  //   };
-  // }, []);
   const [bind, { width }] = useMeasure();
+
   const props = useSpring({
     config: config1,
     delay: 2200,
@@ -31,7 +26,7 @@ const Loading = () => {
   });
   const props2 = useSpring({
     config: config2,
-    delay: 1000,
+    delay: 1500,
     opacity: 1,
     y: 0,
     from: {

@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 export const LoadingContainer = styled(animated.div)`
   width: 150px;
   height: 2px;
-  background-color: grey;
+  background-color: ${(props) => props.theme.colors.grey};
 `;
 
 export const LoadingBar = styled(animated.div)`

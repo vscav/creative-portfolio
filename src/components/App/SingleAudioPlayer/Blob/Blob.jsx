@@ -37,7 +37,7 @@ const Blob = (props) => {
     props.clickHandler();
   };
 
-  return <BlobShape onClick={handleClick} blob={blob} size={props.size} />;
+  return <BlobShape name="sound-control" onClick={handleClick} blob={blob} size={props.size} />;
 };
 
 export default Blob;
