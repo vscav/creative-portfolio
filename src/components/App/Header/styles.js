@@ -19,13 +19,18 @@ export const Logo = styled.div`
     text-decoration: none;
     font-weight: 700;
     color: ${(props) => props.theme.colors.text};
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
 `;
 
 export const FlipContainer = styled.span`
+  color: ${(props) => props.theme.colors.text};
   display: block;
-  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.22, 0.21, 1.04);
-  transition: all 0.5s cubic-bezier(0.4, 0.22, 0.21, 1.04);
+  -webkit-transition: all 0.5s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+    color 0.3s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.4, 0.22, 0.21, 1.04),
+    color 0.3s ease-in-out;
 
   & > * {
     display: block;

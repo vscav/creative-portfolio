@@ -10,7 +10,8 @@ export const Toggle = styled.button`
   border: none;
   border-radius: 6px;
   background: ${(props) => props.theme.colors.text};
-  transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.15);

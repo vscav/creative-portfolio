@@ -11,6 +11,7 @@ export const CursorInner = styled.div.attrs((props) => ({
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
+  -webkit-transition: opacity 0.15s ease-in-out, transform 0.25s ease-in-out;
   transition: opacity 0.15s ease-in-out, transform 0.25s ease-in-out;
   backface-visibility: hidden;
   will-change: transform;
@@ -28,6 +29,7 @@ export const CursorOuter = styled.div.attrs((props) => ({
   position: fixed;
   border-radius: 50%;
   pointer-events: none;
+  -webkit-transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
   backface-visibility: hidden;
   will-change: transform;

@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         user-select: none;
+        color: ${(props) => props.theme.colors.text};
         background: ${(props) => props.theme.colors.background};
         overscroll-behavior: none;
         overflow: hidden;
@@ -36,11 +37,15 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         font-size: 1rem;
         letter-spacing: -.02em;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
 
-    body, a {
+    a {
       color: ${(props) => props.theme.colors.text};
       -webkit-tap-highlight-color: transparent;
+      -webkit-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
     }
 
     #root {

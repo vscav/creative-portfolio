@@ -9,7 +9,8 @@ export const ToolTip = styled.span`
   top: 50%;
   transform: translate(0, -50%);
   text-transform: uppercase;
-  transition: transform 1s ease, opacity 1s ease, visibility 1s ease;
+  transition: transform 1s ease, opacity 1s ease, visibility 1s ease,
+    color 0.3s ease-in-out;
   white-space: nowrap;
   position: absolute;
   opacity: 0;
