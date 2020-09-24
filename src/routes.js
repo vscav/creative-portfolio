@@ -2,6 +2,6 @@ export default {
   home: "/",
   projects: "/projects",
   profile: "/profile",
-  project: "/projects/:name",
+  // project: "/projects/:name",
   notFound: "/",
 };

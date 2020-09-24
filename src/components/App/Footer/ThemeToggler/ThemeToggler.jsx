@@ -1,7 +1,9 @@
 import * as React from "react";
-import { Toggle, ToggleContainer } from "./styles";
-import Tooltip from "../Tooltip";
 import { ThemeContext } from "styled-components";
+
+import Tooltip from "../../Tooltip";
+
+import { Toggle, ToggleContainer } from "./styles";
 
 const ThemeToggler = ({ toggleTheme }) => {
   const { title } = React.useContext(ThemeContext);

@@ -30,6 +30,7 @@ const pages = [
   {
     exact: true,
     path: routes.projects,
+    children: [{ path: "/:slug", component: Project }],
     component: Projects,
   },
   {
@@ -37,11 +38,11 @@ const pages = [
     path: routes.profile,
     component: Profile,
   },
-  {
-    exact: true,
-    path: routes.project,
-    component: Project,
-  },
+  // {
+  //   exact: true,
+  //   path: routes.project,
+  //   component: Project,
+  // },
 ];
 
 const App = () => {
@@ -52,25 +53,27 @@ const App = () => {
   };
 
   return (
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <GlobalFonts />
-        <Router>
-          <DefaultLayout toggleTheme={toggleTheme}>
-            <Switch>
-              {pages.map(({ exact, path, component: Component }, index) => (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <GlobalFonts />
+      <Router>
+        <DefaultLayout toggleTheme={toggleTheme}>
+          <Switch>
+            {pages.map(
+              ({ exact, path, children, component: Component }, index) => (
                 <Route
                   key={index}
                   exact={exact}
                   path={path}
                   render={(props) => <Component {...props} />}
                 />
-              ))}
-              <Redirect to={routes.home} />
-            </Switch>
-          </DefaultLayout>
-        </Router>
-      </ThemeProvider>
+              )
+            )}
+            <Redirect to={routes.home} />
+          </Switch>
+        </DefaultLayout>
+      </Router>
+    </ThemeProvider>
   );
 };
 

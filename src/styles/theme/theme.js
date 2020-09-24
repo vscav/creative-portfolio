@@ -4,6 +4,7 @@ export const darkTheme = {
   colors: {
     background: "#030303",
     text: "#fafafa",
+
     grey: "#32363a",
   },
 };
@@ -14,6 +15,7 @@ export const lightTheme = {
   colors: {
     background: "#fafafa",
     text: "#030303",
+
     grey: "#c3c6c8",
   },
 };

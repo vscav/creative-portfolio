@@ -1,9 +1,11 @@
 import * as React from "react";
-import { FooterNav } from "./styles";
+
+import SingleAudioPlayer from "./SingleAudioPlayer";
+import ThemeToggler from "./ThemeToggler";
+// import Social from "./Social";
+
 import { Container, Flex } from "../../../styles/global";
-import SingleAudioPlayer from "../SingleAudioPlayer";
-import ThemeToggler from "../ThemeToggler";
-// import Social from "../Social";
+import { FooterNav } from "./styles";
 
 const Footer = ({ toggleTheme }) => {
   return (

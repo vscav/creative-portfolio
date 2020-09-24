@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { BlobShape } from "./styles";
 
 const Blob = (props) => {
@@ -37,7 +38,14 @@ const Blob = (props) => {
     props.clickHandler();
   };
 
-  return <BlobShape name="sound-control" onClick={handleClick} blob={blob} size={props.size} />;
+  return (
+    <BlobShape
+      name="sound-control"
+      onClick={handleClick}
+      blob={blob}
+      size={props.size}
+    />
+  );
 };
 
 export default Blob;

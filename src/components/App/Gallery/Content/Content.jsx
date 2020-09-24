@@ -14,9 +14,8 @@ const transition = (x, y) => `translate3d(${x / 15}px, ${y / 15}px, 0)`;
 
 const config = { mass: 5, tension: 2000, friction: 200 };
 
-const home = window.location.pathname === "/" ? true : false;
-
 const Content = ({ ...props }) => {
+  const home = window.location.pathname === "/" ? true : false;
   const title = "Wodabest";
   const images = [imgTest, imgTest, imgTest, imgTest, imgTest, imgTest];
   const { contentMaxWidth: w } = useBlock();

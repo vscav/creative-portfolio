@@ -2,8 +2,8 @@ import * as React from "react";
 import { useSpring } from "react-spring";
 import * as easings from "d3-ease";
 
-import Copyright from "../Copyright";
-import Loading from "../Loading";
+import Copyright from "./Copyright";
+// import Loading from "./Loading";
 
 import {
   Icon,
@@ -68,7 +68,7 @@ const Introduction = () => {
       <IconView style={props4}>
         <IconContainer style={props3}>
           <Icon>V</Icon>
-          <Loading />
+          {/* <Loading /> */}
           <Copyright />
         </IconContainer>
       </IconView>

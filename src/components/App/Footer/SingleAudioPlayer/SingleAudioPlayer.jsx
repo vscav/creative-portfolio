@@ -1,17 +1,16 @@
 import * as React from "react";
-import { AudioContainer } from "./styles";
 
 import Blob from "./Blob";
-import Tooltip from "../Tooltip";
+import Tooltip from "../../Tooltip";
+
+import { AudioContainer } from "./styles";
 
 const SingleAudioPlayer = (props) => {
   const [isPlaying, setPlaying] = React.useState(props.autoPlay);
   const [toggleCount] = React.useState(0);
 
   React.useEffect(() => {
-    const audio = document.getElementsByClassName(
-      "audio-element"
-    )[0];
+    const audio = document.getElementsByClassName("audio-element")[0];
     audio.volume = props.volume;
   }, [props.volume]);
 
@@ -57,9 +56,7 @@ const SingleAudioPlayer = (props) => {
   };
 
   const toggle = () => {
-    const audio = document.getElementsByClassName(
-      "audio-element"
-    )[0];
+    const audio = document.getElementsByClassName("audio-element")[0];
     props.fade
       ? isPlaying
         ? fadeOut(audio)

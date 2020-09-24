@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useSpring } from "react-spring";
-import useMeasure from "../../../hooks/useMesure";
+import useMeasure from "../../../../hooks/useMesure";
 import * as easings from "d3-ease";
 
 import { LoadingContainer, LoadingBar } from "./styles";
