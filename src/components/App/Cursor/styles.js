@@ -6,7 +6,7 @@ export const CursorInner = styled.div.attrs((props) => ({
     width: `${props.size}px`,
   },
 }))`
-  z-index: 10000000;
+  z-index: 100000000;
   display: block;
   position: fixed;
   border-radius: 50%;
@@ -24,7 +24,7 @@ export const CursorOuter = styled.div.attrs((props) => ({
     width: `${props.size}px`,
   },
 }))`
-  z-index: 10000000;
+  z-index: 100000000;
   display: block;
   position: fixed;
   border-radius: 50%;

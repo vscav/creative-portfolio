@@ -1,3 +1,3 @@
-import store from "./store";
+import { projects } from "./store";
 
-export default store;
+export { projects };

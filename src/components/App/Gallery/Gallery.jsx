@@ -35,6 +35,7 @@ const Gallery = () => {
         orthographic
         camera={{ zoom: 1, position: [0, 0, 500] }}
         onCreated={(state) => {
+          console.log("THREE.WebGLRenderer: Context Instanciated.");
           state.gl.setClearColor("#000", 0);
           setEvents(state.events);
         }}
