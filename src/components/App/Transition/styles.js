@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { animated } from "react-spring";
 
-export const IntroductionFrontOverlay = styled(animated.div)`
+export const TransitionFrontOverlay = styled(animated.div)`
   height: 100vh;
   position: absolute;
   width: 100%;
@@ -17,7 +17,7 @@ export const IntroductionFrontOverlay = styled(animated.div)`
   will-change: height;
 `;
 
-export const IntroductionBackOverlay = styled(animated.div)`
+export const TransitionBackOverlay = styled(animated.div)`
   height: 100vh;
   position: absolute;
   width: 100%;
@@ -25,15 +25,4 @@ export const IntroductionBackOverlay = styled(animated.div)`
   z-index: 9999999;
   bottom: 0;
   right: 0;
-
-  /* &::before {
-    position: absolute;
-    content: "";
-    width: 150vw;
-    height: 400px;
-    background: blue;
-    border-radius: 50%;
-    left: -100%;
-    transform: translateX(50%);
-  } */
 `;

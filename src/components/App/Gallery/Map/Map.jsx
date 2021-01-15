@@ -39,7 +39,7 @@ const Map = () => {
   const [position, setPosition] = React.useState(0);
   return (
     <DragPositionContext.Provider value={{ position, setPosition }}>
-      {new Array(navigation.length).fill(0).map((project, index) => (
+      {new Array(navigation.length).fill(0).map((_, index) => (
         <Block key={index} factor={1 / state.sections / 2} offset={index}>
           <Dot />
         </Block>

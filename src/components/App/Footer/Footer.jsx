@@ -2,7 +2,7 @@ import * as React from "react";
 
 import SingleAudioPlayer from "./SingleAudioPlayer";
 import ThemeToggler from "./ThemeToggler";
-// import Social from "./Social";
+import ProgressBar from "./ProgressBar";
 
 import { Container, Flex } from "../../../styles/global";
 import { FooterNav } from "./styles";
@@ -13,15 +13,14 @@ const Footer = ({ toggleTheme }) => {
       <Container>
         <Flex spaceBetween>
           <ThemeToggler toggleTheme={toggleTheme} />
+          <ProgressBar />
           <SingleAudioPlayer
             file={require("../../../assets/sounds/rone-icare.mp3")}
             autoPlay={true}
-            // autoPlay
             loop
             fade
             volume={0.4}
           />
-          {/* <Social /> */}
         </Flex>
       </Container>
     </FooterNav>

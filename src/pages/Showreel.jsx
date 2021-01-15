@@ -1,11 +1,11 @@
 import * as React from "react";
 
-import Arrival from "../components/App/Arrival";
+import Transition from "../components/App/Transition";
 
 const Showreel = () => {
   return (
     <>
-      <Arrival />
+      <Transition />
       <div>Showreel page</div>
     </>
   );

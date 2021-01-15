@@ -2,14 +2,14 @@ import * as React from "react";
 import { useSpring } from "react-spring";
 import * as easings from "d3-ease";
 
-import { IntroductionFrontOverlay, IntroductionBackOverlay } from "./styles";
+import { TransitionFrontOverlay, TransitionBackOverlay } from "./styles";
 
 const config = {
   duration: 600,
   easing: easings.easeCubic,
 };
 
-const Introduction = () => {
+const Transition = () => {
   const props = useSpring({
     config: config,
     delay: 500,
@@ -32,10 +32,10 @@ const Introduction = () => {
   });
   return (
     <>
-      <IntroductionFrontOverlay style={props} />
-      <IntroductionBackOverlay style={props2} />
+      <TransitionFrontOverlay style={props} />
+      <TransitionBackOverlay style={props2} />
     </>
   );
 };
 
-export default Introduction;
+export default Transition;

@@ -1,11 +1,11 @@
 import * as React from "react";
 
-import Arrival from "../components/App/Arrival";
+import Transition from "../components/App/Transition";
 
 const Profile = () => {
   return (
     <>
-      <Arrival />
+      <Transition />
       <div>Profile page</div>
     </>
   );

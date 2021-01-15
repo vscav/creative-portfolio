@@ -17,9 +17,10 @@ const Control = () => {
   const { position, setPosition } = React.useContext(DragPositionContext);
   const [hovered, setHoverState] = React.useState(false);
   const { sectionWidth } = useBlock();
+  state.sectionWidth = sectionWidth;
   React.useEffect(() => {
     positionsSet = [...new Array(6)].map(
-      (position, index) => index * sectionWidth * state.zoom
+      (_, index) => index * sectionWidth * state.zoom
     );
   }, [positionsSet]);
   React.useEffect(() => {
