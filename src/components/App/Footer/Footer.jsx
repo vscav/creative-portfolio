@@ -15,7 +15,7 @@ const Footer = ({ toggleTheme }) => {
           <ThemeToggler toggleTheme={toggleTheme} />
           <SingleAudioPlayer
             file={require("../../../assets/sounds/rone-icare.mp3")}
-            autoPlay={false}
+            autoPlay={true}
             // autoPlay
             loop
             fade

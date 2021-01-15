@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Media } from "../breakpoints";
+
 import Arrival from "../components/App/Arrival";
 import Gallery from "../components/App/Gallery";
 
@@ -7,7 +9,15 @@ const Home = () => {
   return (
     <>
       <Arrival />
-      <Gallery />
+      <Media>
+        {({ breakpoints, currentBreakpoint }) =>
+          breakpoints[currentBreakpoint] > breakpoints.mobileLandscape ? (
+            <Gallery />
+          ) : (
+            <div>Mobile version</div>
+          )
+        }
+      </Media>
     </>
   );
 };
