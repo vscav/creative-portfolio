@@ -4,6 +4,7 @@ import { Media } from "../breakpoints";
 
 import Introduction from "../components/App/Introduction";
 import Gallery from "../components/App/Gallery";
+import ProjectsList from "../components/App/ProjectsList";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
           breakpoints[currentBreakpoint] > breakpoints.mobileLandscape ? (
             <Gallery />
           ) : (
-            <div>Mobile version</div>
+            <ProjectsList />
           )
         }
       </Media>

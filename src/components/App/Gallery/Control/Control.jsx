@@ -23,7 +23,6 @@ const Control = () => {
     );
   }, [positionsSet]);
   React.useEffect(() => {
-    // document.body.style.cursor = hovered ? "grab" : "auto";
     state.ref.scrollLeft = isClosest(position, positionsSet);
   }, [hovered]);
   const { viewportWidth } = useBlock();

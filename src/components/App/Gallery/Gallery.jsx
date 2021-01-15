@@ -23,7 +23,10 @@ const Gallery = () => {
     config: config,
   }));
   const [otherProps, setOtherProps] = React.useState([0, 0]);
-  const onScroll = (e) => (state.top.current = e.target.scrollLeft);
+  const onScroll = (e) => {
+    state.top.current = e.target.scrollLeft;
+    // console.log(e.target.scrollLeft);
+  };
   React.useEffect(() => {
     state.ref = scrollArea.current;
     onScroll({ target: scrollArea.current });

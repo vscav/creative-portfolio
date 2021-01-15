@@ -2,13 +2,13 @@ import * as React from "react";
 
 import Arrival from "../components/App/Arrival";
 
-const Profile = () => {
+const Showreel = () => {
   return (
     <>
       <Arrival />
-      <div>Profile page</div>
+      <div>Showreel page</div>
     </>
   );
 };
 
-export default Profile;
+export default Showreel;

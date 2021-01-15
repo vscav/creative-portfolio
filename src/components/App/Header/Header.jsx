@@ -22,12 +22,17 @@ const Header = () => {
             <Link to="/projects">VSCAV</Link>
           </Logo>
           <LinkContainer>
-            {/* <Link to="/profile">
+            <DelayLink
+              to="/showreel"
+              delay={1000}
+              onDelayStart={onDelayStart}
+              onDelayEnd={onDelayEnd}
+            >
               <FlipContainer>
-                <span>Profile</span>
-                <span>Profile</span>
+                <span>Showreel</span>
+                <span>Showreel</span>
               </FlipContainer>
-            </Link> */}
+            </DelayLink>
             <DelayLink
               to="/profile"
               delay={1000}

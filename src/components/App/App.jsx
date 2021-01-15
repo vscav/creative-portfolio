@@ -13,7 +13,7 @@ import { GlobalStyle } from "../../styles/global";
 
 import { GlobalFonts } from "../../assets/fonts";
 
-import { Home, Projects, Profile, Project } from "../../pages";
+import { Home, Projects, Showreel, Profile, Project } from "../../pages";
 
 import { DefaultLayout } from "../../layouts";
 
@@ -43,6 +43,11 @@ const pages = [
     exact: true,
     path: routes.projects,
     component: Projects,
+  },
+  {
+    exact: true,
+    path: routes.showreel,
+    component: Showreel,
   },
   {
     exact: true,
