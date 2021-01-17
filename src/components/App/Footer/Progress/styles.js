@@ -27,7 +27,7 @@ export const ProgressTextOverlay = styled.div`
 
 export const Text = styled.span`
   font-size: 0.8rem;
-  color: grey;
+  color: ${(props) => props.theme.colors.grey};
   vertical-align: middle;
   line-height: 2.5rem;
   text-transform: uppercase;
@@ -36,7 +36,7 @@ export const Text = styled.span`
 
 export const TextOverlay = styled.span`
   font-size: 0.8rem;
-  color: white;
+  color: ${(props) => props.theme.colors.text};
   vertical-align: middle;
   line-height: 2.5rem;
   text-transform: uppercase;

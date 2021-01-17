@@ -1,4 +1,4 @@
-export const projects = {
+const projects = {
   wodabest: {
     name: "Wodabest",
     date: "05/20",
@@ -24,3 +24,9 @@ export const projects = {
     next: "wodabest",
   },
 };
+
+const projectsReducer = (state = projects, action) => {
+  return state;
+};
+
+export default projectsReducer;

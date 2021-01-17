@@ -1,17 +1,20 @@
 import * as React from "react";
 import { HeaderNav, Logo, FlipContainer, LinkContainer } from "./styles";
 import { Container, Flex } from "../../../styles/global";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { arriveOnPage, leavePage } from "../../../store/actions";
 
 import DelayLink from "../DelayLink";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
   const onDelayStart = () => {
-    console.log("delay start");
+    dispatch(leavePage());
   };
 
   const onDelayEnd = () => {
-    console.log("delay end");
+    dispatch(arriveOnPage());
   };
 
   return (
@@ -19,12 +22,19 @@ const Header = () => {
       <Container>
         <Flex spaceBetween>
           <Logo>
-            <Link to="/projects">VSCAV</Link>
+            <DelayLink
+              to="/projects"
+              delay={1475}
+              onDelayStart={onDelayStart}
+              onDelayEnd={onDelayEnd}
+            >
+              VSCAV
+            </DelayLink>
           </Logo>
           <LinkContainer>
             <DelayLink
               to="/showreel"
-              delay={1000}
+              delay={1475}
               onDelayStart={onDelayStart}
               onDelayEnd={onDelayEnd}
             >
@@ -35,7 +45,7 @@ const Header = () => {
             </DelayLink>
             <DelayLink
               to="/profile"
-              delay={1000}
+              delay={1475}
               onDelayStart={onDelayStart}
               onDelayEnd={onDelayEnd}
             >

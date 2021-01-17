@@ -4,5 +4,5 @@ export default {
   showreel: "/showreel",
   profile: "/profile",
   project: "/projects/:slug",
-  notFound: "/",
+  notFound: "/projects",
 };

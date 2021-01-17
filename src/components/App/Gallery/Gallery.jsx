@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Canvas } from "react-three-fiber";
-import { Html } from "drei";
 import { useSpring } from "react-spring";
 
 import Effects from "./Effects";
@@ -35,13 +34,13 @@ const Gallery = () => {
         orthographic
         camera={{ zoom: 1, position: [0, 0, 500] }}
         onCreated={(state) => {
-          console.log("THREE.WebGLRenderer: Context Instanciated.");
+          console.log("[Info] THREE.WebGLRenderer: Context Instanciated.");
           state.gl.setClearColor("#000", 0);
           setEvents(state.events);
         }}
       >
         <Effects>
-          <React.Suspense fallback={<Html center children="Loading..." />}>
+          <React.Suspense>
             <Content {...props} {...otherProps} />
             <HeadsUpDisplay>
               <Map />

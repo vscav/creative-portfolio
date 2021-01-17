@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useSpring } from "react-spring";
 import * as easings from "d3-ease";
+import { useSelector } from "react-redux";
 
 import { TransitionFrontOverlay, TransitionBackOverlay } from "./styles";
 
@@ -10,28 +11,30 @@ const config = {
 };
 
 const Transition = () => {
-  const [on, set] = React.useState(true);
+  const leavePage = useSelector((state) => state.pageChanged);
 
   const props = useSpring({
     config: config,
-    delay: on ? 500 : 875,
+    delay: leavePage ? 875 : 500,
     from: {
-      height: on ? "100%" : "0%",
+      height: leavePage ? "0%" : "100%",
     },
     to: {
-      height: on ? "0%" : "100%",
+      height: leavePage ? "100%" : "0%",
     },
   });
+
   const props2 = useSpring({
     config: config,
-    delay: on ? 875 : 500,
+    delay: leavePage ? 500 : 875,
     from: {
-      height: on ? "100%" : "0%",
+      height: leavePage ? "0%" : "100%",
     },
     to: {
-      height: on ? "0%" : "100%",
+      height: leavePage ? "100%" : "0%",
     },
   });
+
   return (
     <>
       <TransitionFrontOverlay style={props} />
