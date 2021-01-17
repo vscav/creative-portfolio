@@ -59,15 +59,4 @@ export const IntroductionBackOverlay = styled(animated.div)`
   z-index: 9999999;
   bottom: 0;
   right: 0;
-
-  /* &::before {
-    position: absolute;
-    content: "";
-    width: 150vw;
-    height: 400px;
-    background: blue;
-    border-radius: 50%;
-    left: -100%;
-    transform: translateX(50%);
-  } */
 `;

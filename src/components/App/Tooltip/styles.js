@@ -4,7 +4,7 @@ export const ToolTip = styled.span`
   -webkit-transform: translate(0px, -50%);
   -webkit-transition: opacity 1s ease, visibility 1s ease,
     -webkit-transform 1s ease;
-  font-size: 10px;
+  font-size: 0.625rem;
   color: ${(props) => props.theme.colors.text};
   top: 50%;
   transform: translate(0, -50%);

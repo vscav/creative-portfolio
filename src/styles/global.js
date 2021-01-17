@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
         -webkit-font-smoothing: antialiased;
-        font-size: 16px;
+        font-size: 1rem;
         color: ${(props) => props.theme.colors.text};
         overflow: -moz-scrollbars-none;
         -ms-overflow-style: none;
@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Container = styled.div`
   flex-grow: 1;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 2rem;
   position: relative;
   width: auto;
   height: 100%;

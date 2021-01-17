@@ -10,24 +10,26 @@ const config = {
 };
 
 const Transition = () => {
+  const [on, set] = React.useState(true);
+
   const props = useSpring({
     config: config,
-    delay: 500,
+    delay: on ? 500 : 875,
     from: {
-      height: "100%",
+      height: on ? "100%" : "0%",
     },
     to: {
-      height: "0%",
+      height: on ? "0%" : "100%",
     },
   });
   const props2 = useSpring({
     config: config,
-    delay: 875,
+    delay: on ? 875 : 500,
     from: {
-      height: "100%",
+      height: on ? "100%" : "0%",
     },
     to: {
-      height: "0%",
+      height: on ? "0%" : "100%",
     },
   });
   return (

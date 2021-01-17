@@ -3,7 +3,6 @@ import { useSpring } from "react-spring";
 import * as easings from "d3-ease";
 
 import Copyright from "./Copyright";
-// import Loading from "./Loading";
 
 import {
   Icon,
@@ -68,7 +67,6 @@ const Introduction = () => {
       <IconView style={props4}>
         <IconContainer style={props3}>
           <Icon>V</Icon>
-          {/* <Loading /> */}
           <Copyright />
         </IconContainer>
       </IconView>

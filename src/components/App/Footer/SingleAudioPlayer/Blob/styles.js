@@ -24,7 +24,7 @@ export const BlobShape = styled.button.attrs((props) => ({
 }))`
   animation: ${rotate} 5s linear infinite;
   background-color: ${(props) => props.theme.colors.text};
-  border-width: 0px;
+  border-width: 0;
   outline: none;
   position: relative;
   -webkit-transition: 0.3s linear, background-color 0.3s ease-in-out;

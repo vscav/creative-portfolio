@@ -7,32 +7,32 @@ const Blob = (props) => {
 
   const [blob, setBlob] = React.useState(initialValues);
 
-  const setInitialBorderRadius = () => {
-    setBlob(initialValues);
-  };
-
-  const setRandomBorderRadius = () => {
-    setBlob(generateBorderRadiusValue());
-  };
-
-  const generateBorderRadiusValue = () => {
-    let radii = [];
-    for (let i = 0; i < 4; i++) {
-      radii.push(getRandomValue());
-    }
-    return radii;
-  };
-
-  const getRandomValue = () => {
-    return Math.floor(Math.random() * 50) + 50;
-  };
-
   React.useEffect(() => {
+    const generateBorderRadiusValue = () => {
+      let radii = [];
+      for (let i = 0; i < 4; i++) {
+        radii.push(getRandomValue());
+      }
+      return radii;
+    };
+
+    const getRandomValue = () => {
+      return Math.floor(Math.random() * 50) + 50;
+    };
+
+    const setInitialBorderRadius = () => {
+      setBlob(initialValues);
+    };
+
+    const setRandomBorderRadius = () => {
+      setBlob(generateBorderRadiusValue());
+    };
+
     const interval = setInterval(() => {
       props.active ? setRandomBorderRadius() : setInitialBorderRadius();
     }, 300);
     return () => clearInterval(interval);
-  }, [props.active]);
+  }, [props.active, initialValues]);
 
   const handleClick = () => {
     props.clickHandler();

@@ -6,7 +6,7 @@ import Transition from "../components/App/Transition";
 import Gallery from "../components/App/Gallery";
 import ProjectsList from "../components/App/ProjectsList";
 
-const Home = () => {
+const Projects = () => {
   return (
     <>
       <Transition />
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Projects;

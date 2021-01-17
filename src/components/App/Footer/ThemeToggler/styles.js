@@ -5,10 +5,10 @@ export const ToggleContainer = styled.div`
 `;
 
 export const Toggle = styled.button`
-  height: 12px;
-  width: 12px;
+  height: 0.75rem;
+  width: 0.75rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   background: ${(props) => props.theme.colors.text};
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
