@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Canvas } from "react-three-fiber";
 import { useSpring } from "react-spring";
+import { ReactReduxContext, Provider } from "react-redux";
 
 import Effects from "./Effects";
 import HeadsUpDisplay from "./HeadsUpDisplay";
@@ -8,6 +9,8 @@ import Map from "./Map";
 import Content from "./Content";
 
 import state from "../Three/state";
+
+import store from "../../../store";
 
 import { ScrollView, ScrollArea } from "./styles";
 
@@ -29,25 +32,31 @@ const Gallery = () => {
   }, []);
   return (
     <>
-      <Canvas
-        concurrent
-        orthographic
-        camera={{ zoom: 1, position: [0, 0, 500] }}
-        onCreated={(state) => {
-          console.log("[Info] THREE.WebGLRenderer: Context Instanciated.");
-          state.gl.setClearColor("#000", 0);
-          setEvents(state.events);
-        }}
-      >
-        <Effects>
-          <React.Suspense>
-            <Content {...props} {...otherProps} />
-            <HeadsUpDisplay>
-              <Map />
-            </HeadsUpDisplay>
-          </React.Suspense>
-        </Effects>
-      </Canvas>
+      <ReactReduxContext.Consumer>
+        {({ store }) => (
+          <Canvas
+            concurrent
+            orthographic
+            camera={{ zoom: 1, position: [0, 0, 500] }}
+            onCreated={(state) => {
+              console.log("[Info] THREE.WebGLRenderer: Context Instanciated.");
+              state.gl.setClearColor("#000", 0);
+              setEvents(state.events);
+            }}
+          >
+            <Provider store={store}>
+              <Effects>
+                <React.Suspense>
+                  <Content {...props} {...otherProps} />
+                  <HeadsUpDisplay>
+                    <Map />
+                  </HeadsUpDisplay>
+                </React.Suspense>
+              </Effects>
+            </Provider>
+          </Canvas>
+        )}
+      </ReactReduxContext.Consumer>
       <ScrollView
         ref={scrollArea}
         onScroll={onScroll}

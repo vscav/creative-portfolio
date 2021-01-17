@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
+import ReactBreakpoints from "react-breakpoints";
 
 import usePersistedState from "../../hooks/usePersistedState";
 
@@ -13,18 +14,9 @@ import { DefaultLayout } from "../../layouts";
 
 import { lightTheme, darkTheme } from "../../styles/theme/theme";
 
-import ReactBreakpoints from "../../breakpoints";
-
 import Routes from "./Routes";
 
 import store from "../../store";
-
-// import allReducer from "../../reducers";
-
-// const store = createStore(
-//   allReducer,
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-// );
 
 const breakpoints = {
   mobile: 320,

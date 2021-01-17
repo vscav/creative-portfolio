@@ -1,6 +1,5 @@
 import * as React from "react";
-
-import { Media } from "../breakpoints";
+import { Media } from "react-breakpoints";
 
 import Introduction from "../components/App/Introduction";
 import Gallery from "../components/App/Gallery";
