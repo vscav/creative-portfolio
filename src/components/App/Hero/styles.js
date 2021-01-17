@@ -1,35 +1,30 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
-export const Section = styled.section``;
-
-export const Container = styled.div`
-  width: 1080px;
-  margin: 0 auto;
+export const Section = styled.section`
+  width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  /* visibility: hidden; */
 `;
 
-export const HeroImageContainer = styled.div`
-  width: 100%;
-  /* height: 720px; */
+export const HeroImageContainer = styled(animated.div)`
+  height: 55%;
+  width: 65%;
   position: relative;
   overflow: hidden;
   margin: auto;
-  /* &:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: ${(props) => props.theme.colors.background};
-    top: 0;
-    right: 0;
-  } */
 `;
 
-export const HeroImage = styled.img`
+export const HeroImageContainerOverlay = styled(animated.div)`
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: ${(props) => props.theme.colors.background};
+  z-index: 1;
+`;
+
+export const HeroImage = styled(animated.img)`
   margin: 0 auto;
-  /* transform: scale(1.3); */
+  object-fit: fill;
 `;

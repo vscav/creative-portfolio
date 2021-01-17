@@ -27,8 +27,8 @@ export const GlobalStyle = createGlobalStyle`
         user-select: none;
         color: ${(props) => props.theme.colors.text};
         background: ${(props) => props.theme.colors.background};
-        overscroll-behavior: none;
-        overflow: hidden;
+        /* overscroll-behavior: none;
+        overflow: hidden; */
         margin: 0;
         font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
             "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -66,12 +66,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  flex-grow: 1;
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
   width: auto;
   height: 100%;
+  text-align: center;
+  justify-content: center;
   @media (min-width: 1024px) {
     max-width: 960px;
   }
@@ -92,6 +93,7 @@ export const Container = styled.div`
 `;
 
 export const Flex = styled.div`
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center;
