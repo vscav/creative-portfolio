@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
 import { animated } from "react-spring";
+import { breakpoints } from "../../../styles/breakpoints";
 
 export const IconView = styled(animated.div)`
   position: absolute;
@@ -31,7 +31,7 @@ export const Icon = styled.span`
   font-size: 12rem;
   color: ${(props) => props.theme.colors.text};
 
-  @media (min-width: 725px) {
+  @media (min-width: ${breakpoints.tablet}px) {
     font-size: 8rem;
   }
 `;

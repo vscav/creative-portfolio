@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, css } from "styled-components";
 import { normalize } from "styled-normalize";
+import { breakpoints } from "./breakpoints";
 
 export const GlobalStyle = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
@@ -70,13 +71,13 @@ export const Container = styled.div`
   padding: 4vw 10vw;
   position: relative;
   width: auto;
-  @media (min-width: 1024px) {
+  @media (min-width: ${breakpoints.tabletLandscape}px) {
     max-width: 960px;
   }
-  @media (min-width: 1216px) {
+  @media (min-width: ${breakpoints.desktop}px) {
     max-width: 1152px;
   }
-  @media (min-width: 1408px) {
+  @media (min-width: ${breakpoints.desktopWide}px) {
     max-width: 1244px;
   }
   ${(props) =>

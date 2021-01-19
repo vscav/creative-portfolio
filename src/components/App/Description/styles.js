@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../styles/breakpoints";
 
 export const DescriptionContainer = styled.div`
   width: 45%;
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.tablet}px) {
     width: 100%;
     margin-bottom: 40px;
   }

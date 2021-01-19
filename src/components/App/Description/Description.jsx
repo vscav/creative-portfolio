@@ -14,8 +14,7 @@ const Description = () => {
         <DescriptionContainer>
           <DescriptionHeader>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            mollis at mi ac consectetur. Duis justo urna, vulputate sed tellus
-            quis, cursus varius purus.
+            mollis at mi ac consectetur.
           </DescriptionHeader>
         </DescriptionContainer>
         <DescriptionContainer>

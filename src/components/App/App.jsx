@@ -13,20 +13,11 @@ import { GlobalFonts } from "../../assets/fonts";
 import { DefaultLayout } from "../../layouts";
 
 import { lightTheme, darkTheme } from "../../styles/theme/theme";
+import { breakpoints } from "../../styles/breakpoints";
 
 import Routes from "./Routes";
 
 import store from "../../store";
-
-const breakpoints = {
-  mobile: 320,
-  mobileLandscape: 480,
-  tablet: 768,
-  tabletLandscape: 1024,
-  desktop: 1200,
-  desktopWide: 1500,
-  desktopHuge: 1920,
-};
 
 const App = () => {
   const [theme, setTheme] = usePersistedState("theme", darkTheme);
