@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 
-export const Section = styled.section`
-  width: 100vw;
-  height: 100vh;
-`;
-
 export const HeroImageContainer = styled(animated.div)`
   height: 55%;
-  width: 65%;
+  // width: 65%;
   position: relative;
   overflow: hidden;
   margin: auto;

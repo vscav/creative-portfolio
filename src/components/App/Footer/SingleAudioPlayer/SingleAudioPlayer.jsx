@@ -62,8 +62,8 @@ const SingleAudioPlayer = (props) => {
         ? fadeOut(audio)
         : fadeIn(audio)
       : isPlaying
-      ? pause(audio)
-      : play(audio);
+        ? pause(audio)
+        : play(audio);
   };
 
   return (

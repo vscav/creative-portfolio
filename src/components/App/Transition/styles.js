@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 
 export const TransitionFrontOverlay = styled(animated.div)`
   height: 100vh;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background: ${(props) => props.theme.colors.background};
   z-index: 10000000;
@@ -19,7 +19,7 @@ export const TransitionFrontOverlay = styled(animated.div)`
 
 export const TransitionBackOverlay = styled(animated.div)`
   height: 100vh;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background: ${(props) => props.theme.colors.text};
   z-index: 9999999;

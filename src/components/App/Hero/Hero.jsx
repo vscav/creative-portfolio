@@ -2,7 +2,6 @@ import * as React from "react";
 import { useSpring } from "react-spring";
 import * as easings from "d3-ease";
 import {
-  Section,
   HeroImageContainer,
   HeroImageContainerOverlay,
   HeroImage,
@@ -61,16 +60,14 @@ const Hero = () => {
   });
 
   return (
-    <Section>
-      <Container style={props1}>
-        <Flex flexEnd>
-          <HeroImageContainer>
-            <HeroImageContainerOverlay style={props3} />
-            <HeroImage style={props2} src={model} />
-          </HeroImageContainer>
-        </Flex>
-      </Container>
-    </Section>
+    <Container style={props1}>
+      <Flex flexEnd>
+        <HeroImageContainer>
+          <HeroImageContainerOverlay style={props3} />
+          <HeroImage style={props2} src={model} />
+        </HeroImageContainer>
+      </Flex>
+    </Container>
   );
 };
 

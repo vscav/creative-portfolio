@@ -67,12 +67,9 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 4vw 10vw;
   position: relative;
   width: auto;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
   @media (min-width: 1024px) {
     max-width: 960px;
   }
@@ -93,14 +90,24 @@ export const Container = styled.div`
 `;
 
 export const Flex = styled.div`
-  height: 100%;
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   ${(props) =>
+    props.wrapper &&
+    css`
+      margin-bottom: 40px;
+    `};
+  ${(props) =>
     props.spaceBetween &&
     css`
       justify-content: space-between;
+    `};
+  ${(props) =>
+    props.spaceAround &&
+    css`
+      justify-content: space-around;
     `};
   ${(props) =>
     props.flexEnd &&
@@ -121,5 +128,20 @@ export const Flex = styled.div`
     props.flexColumn &&
     css`
       flex-direction: column;
+    `};
+  ${(props) =>
+    props.wrapping &&
+    css`
+      flex-wrap: wrap;
+    `};
+  ${(props) =>
+    props.noWrapping &&
+    css`
+      flex-wrap: nowrap;
+    `};
+  ${(props) =>
+    props.reverseWrapping &&
+    css`
+      flex-wrap: wrap-reverse;
     `};
 `;
