@@ -38,9 +38,18 @@ export const FlipContainer = styled.span`
 `;
 
 export const LinkContainer = styled.div`
-  display: inline-block;
   overflow: hidden;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+  padding: 1.25rem;
 
   a {
     overflow: hidden;
@@ -52,6 +61,10 @@ export const LinkContainer = styled.div`
     transition: all 0.3s cubic-bezier(0.44, 0.15, 0.2, 1);
     -webkit-transform: translateX(0);
     transform: translateX(0);
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
 
     &:hover ${FlipContainer} {
       -webkit-transform: translateY(-50%);

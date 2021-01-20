@@ -3,6 +3,7 @@ import { breakpoints } from "../../../styles/breakpoints";
 
 export const DescriptionContainer = styled.div`
   width: 45%;
+  padding: 1.25rem;
   @media (max-width: ${breakpoints.tablet}px) {
     width: 100%;
     margin-bottom: 40px;
