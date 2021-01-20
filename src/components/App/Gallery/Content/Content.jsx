@@ -8,7 +8,7 @@ import { Block, useBlock } from "../../Three/Block/Block";
 import { ProjectTitle } from "./styles";
 
 import imgTest from "../../../../assets/images/model.jpg";
-import dispImg from "../../../../assets/images/displacement/fluid-resized.jpg";
+import dispImg from "../../../../assets/images/textures/fluid-resized.jpg";
 
 const transition = (x, y) => `translate3d(${x / 15}px, ${y / 15}px, 0)`;
 

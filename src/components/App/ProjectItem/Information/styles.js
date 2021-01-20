@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../styles/breakpoints";
+import { breakpoints } from "../../../../styles/breakpoints";
 
 export const InformationList = styled.ul`
   margin: 1.25rem;

@@ -6,9 +6,9 @@ import {
   HeroImageContainerOverlay,
   HeroImage,
 } from "./styles";
-import { Container, Flex } from "../../../styles/global";
+import { Container, Flex } from "../../../../styles/global";
 
-import model from "../../../assets/images/model.jpg";
+import model from "../../../../assets/images/model.jpg";
 
 const config1 = {
   duration: 0,
@@ -25,7 +25,7 @@ const config3 = {
   easing: easings.easeCubic,
 };
 
-const Hero = () => {
+const ProjectHero = () => {
   const props1 = useSpring({
     config: config1,
     delay: 0,
@@ -71,4 +71,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default ProjectHero;

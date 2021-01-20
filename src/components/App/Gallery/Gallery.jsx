@@ -41,6 +41,7 @@ const Gallery = () => {
             onCreated={(state) => {
               console.log("[Info] THREE.WebGLRenderer: Context Instanciated.");
               state.gl.setClearColor("#000", 0);
+              delete state.events.onGotPointerCaptureLegacy;
               setEvents(state.events);
             }}
           >

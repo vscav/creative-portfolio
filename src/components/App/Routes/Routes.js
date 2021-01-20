@@ -39,7 +39,6 @@ const Routes = (props) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    // console.log("Land on: " + location.pathname);
     dispatch(arriveOnPage());
   }, [location, dispatch]);
 

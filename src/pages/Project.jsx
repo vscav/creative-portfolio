@@ -2,9 +2,7 @@ import * as React from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import Hero from "../components/App/Hero";
-import Description from "../components/App/Description";
-import Information from "../components/App/Information";
+import ProjectItem from "../components/App/ProjectItem";
 
 import routes from "../routes/routes";
 
@@ -19,9 +17,7 @@ const Project = ({ match }) => {
     //return <div>Page for the following project: {match.params.slug}</div>;
     return (
       <>
-        <Hero />
-        <Description />
-        <Information />
+        <ProjectItem />
       </>
     );
   }
