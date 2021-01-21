@@ -1,25 +1,67 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
-export const HeroImageContainer = styled(animated.div)`
-  height: 55%;
-  // width: 65%;
+export const ProjectHeroContainer = styled.div`
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #111111;
+  color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
   position: relative;
   overflow: hidden;
-  margin: auto;
+  z-index: -1;
 `;
 
-export const HeroImageContainerOverlay = styled(animated.div)`
-  width: 100%;
+export const ProjectHeroParallax = styled.img`
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  background: ${(props) => props.theme.colors.background};
-  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 `;
 
-export const HeroImage = styled(animated.img)`
-  margin: 0 auto;
-  object-fit: fill;
+export const ProjectHeroInfo = styled.div`
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0 10vw;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+`;
+
+export const ProjectHeroTitle = styled.h1`
+  font-size: 5em;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+`;
+
+export const ProjectHeroCategory = styled.div`
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-transform: uppercase;
+
+  span {
+    &:first-of-type {
+      font-size: 1.1em;
+      opacity: 0.7;
+    }
+    &:last-of-type {
+      display: block;
+      font-size: 1.3em;
+      font-weight: 600;
+      letter-spacing: 0;
+      margin-top: 5px;
+      text-transform: none;
+    }
+  }
 `;
