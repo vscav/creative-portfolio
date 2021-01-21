@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Media } from "react-breakpoints";
 
-import Gallery from "../components/App/Gallery";
-import ProjectsList from "../components/App/ProjectsList";
+import Gallery from "components/App/Gallery";
+import ProjectsList from "components/App/ProjectsList";
 
 const Projects = () => {
   return (

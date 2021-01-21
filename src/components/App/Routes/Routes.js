@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Redirect, Switch, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import { Home, Projects, Showreel, Profile, Project } from "../../../pages";
-import routes from "../../../routes/routes";
-import { arriveOnPage } from "../../../store/actions";
+import { Home, Projects, Showreel, Profile, Project } from "pages";
+import routes from "routes/routes";
+import { arriveOnPage } from "store/actions";
 
 const pages = [
   {

@@ -1,10 +1,10 @@
 import * as React from "react";
 import { HeaderNav, Logo, FlipContainer, LinkContainer } from "./styles";
-import { Container, Flex } from "../../../styles/global";
+import { Container, Flex } from "styles/global";
 import { useDispatch } from "react-redux";
-import { arriveOnPage, leavePage } from "../../../store/actions";
+import { arriveOnPage, leavePage } from "store/actions";
 
-import DelayLink from "../DelayLink";
+import DelayLink from "components/App/DelayLink";
 
 const Header = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
-import { breakpoints } from "../../../styles/breakpoints";
+import { breakpoints } from "styles/breakpoints";
 
 export const IconView = styled(animated.div)`
   position: absolute;

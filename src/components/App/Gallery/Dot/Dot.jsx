@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import { DragPositionContext } from "../Map/Map";
+import { DragPositionContext } from "components/App/Gallery//Map/Map";
 
-import { useBlock } from "../../Three/Block/Block";
+import { useBlock } from "components/App/Three/Block/Block";
 
-import state from "../../Three/state";
+import state from "components/App/Three/state";
 
 const Dot = () => {
   const { setPosition } = React.useContext(DragPositionContext);

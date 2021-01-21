@@ -2,9 +2,9 @@ import * as React from "react";
 import { Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import ProjectItem from "../components/App/ProjectItem";
+import ProjectItem from "components/App/ProjectItem";
 
-import routes from "../routes/routes";
+import routes from "routes/routes";
 
 const Project = ({ match }) => {
   const projects = useSelector((state) => state.projects);

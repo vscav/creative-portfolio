@@ -6,9 +6,9 @@ import {
   HeroImageContainerOverlay,
   HeroImage,
 } from "./styles";
-import { Container, Flex } from "../../../../styles/global";
+import { Container, Flex } from "styles/global";
 
-import model from "../../../../assets/images/model.jpg";
+import model from "assets/images/model.jpg";
 
 const config1 = {
   duration: 0,

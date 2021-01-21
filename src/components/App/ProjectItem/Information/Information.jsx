@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Container, Flex } from "../../../../styles/global";
+import { Container, Flex } from "styles/global";
 import { InformationList, InformationTitle, InformationItem } from "./styles";
 
 const Information = () => {

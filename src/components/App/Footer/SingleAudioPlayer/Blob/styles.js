@@ -29,6 +29,7 @@ export const BlobShape = styled.button.attrs((props) => ({
   position: relative;
   -webkit-transition: 0.3s linear, background-color 0.3s ease-in-out;
   transition: 0.3s linear, background-color 0.3s ease-in-out;
+  mix-blend-mode: difference;
 
   &:hover + span {
     opacity: 1;

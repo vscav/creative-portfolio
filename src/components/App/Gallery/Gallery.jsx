@@ -8,9 +8,9 @@ import HeadsUpDisplay from "./HeadsUpDisplay";
 import Map from "./Map";
 import Content from "./Content";
 
-import state from "../Three/state";
+import state from "components/App/Three/state";
 
-import store from "../../../store";
+import store from "store";
 
 import { ScrollView, ScrollArea } from "./styles";
 

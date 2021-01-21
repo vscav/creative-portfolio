@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Visual from "../Visual";
+import Visual from "components/App/ProjectItem/Visual";
 
 import { VisualsWrapper } from "./styles";
 

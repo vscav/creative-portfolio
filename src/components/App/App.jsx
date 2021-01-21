@@ -4,20 +4,20 @@ import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
 import ReactBreakpoints from "react-breakpoints";
 
-import usePersistedState from "../../hooks/usePersistedState";
+import usePersistedState from "hooks/usePersistedState";
 
-import { GlobalStyle } from "../../styles/global";
+import { GlobalStyle } from "styles/global";
 
-import { GlobalFonts } from "../../assets/fonts";
+import { GlobalFonts } from "assets/fonts";
 
-import { DefaultLayout } from "../../layouts";
+import { DefaultLayout } from "layouts";
 
-import { lightTheme, darkTheme } from "../../styles/theme/theme";
-import { breakpoints } from "../../styles/breakpoints";
+import { lightTheme, darkTheme } from "styles/theme/theme";
+import { breakpoints } from "styles/breakpoints";
 
 import Routes from "./Routes";
 
-import store from "../../store";
+import store from "store";
 
 const App = () => {
   const [theme, setTheme] = usePersistedState("theme", darkTheme);

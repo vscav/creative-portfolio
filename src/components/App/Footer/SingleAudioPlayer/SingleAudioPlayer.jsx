@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Blob from "./Blob";
-import Tooltip from "../../Tooltip";
+import Tooltip from "components/App/Tooltip";
 
 import { AudioContainer } from "./styles";
 
@@ -62,8 +62,8 @@ const SingleAudioPlayer = (props) => {
         ? fadeOut(audio)
         : fadeIn(audio)
       : isPlaying
-        ? pause(audio)
-        : play(audio);
+      ? pause(audio)
+      : play(audio);
   };
 
   return (

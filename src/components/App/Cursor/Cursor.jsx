@@ -1,7 +1,7 @@
 import * as React from "react";
-import { useEventListener } from "../../../hooks/useEventListener";
-import IsDevice from "../../../helpers/isDevice";
-import IsBrowser from "../../../helpers/isBrowser";
+import { useEventListener } from "hooks/useEventListener";
+import IsDevice from "helpers/isDevice";
+import IsBrowser from "helpers/isBrowser";
 
 import { CursorInner, CursorOuter } from "./styles";
 

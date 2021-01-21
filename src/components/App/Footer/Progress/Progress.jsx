@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import normalize from "../../../../helpers/normalize";
-import state from "../../Three/state";
+import normalize from "helpers/normalize";
+import state from "components/App/Three/state";
 
 import {
   ProgressContainer,

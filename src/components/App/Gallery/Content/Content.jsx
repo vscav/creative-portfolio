@@ -2,13 +2,13 @@ import * as React from "react";
 import { Html } from "drei";
 import { useTrail, animated } from "react-spring";
 
-import Plane from "../Plane";
-import { Block, useBlock } from "../../Three/Block/Block";
+import Plane from "components/App/Gallery/Plane";
+import { Block, useBlock } from "components/App/Three/Block/Block";
 
 import { ProjectTitle } from "./styles";
 
-import imgTest from "../../../../assets/images/model.jpg";
-import dispImg from "../../../../assets/images/textures/fluid-resized.jpg";
+import imgTest from "assets/images/model.jpg";
+import dispImg from "assets/images/textures/fluid-resized.jpg";
 
 const transition = (x, y) => `translate3d(${x / 15}px, ${y / 15}px, 0)`;
 

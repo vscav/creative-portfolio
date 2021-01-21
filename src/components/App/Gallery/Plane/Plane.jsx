@@ -3,11 +3,11 @@ import { useFrame } from "react-three-fiber";
 import * as THREE from "three";
 import lerp from "lerp";
 
-import { useBlock } from "../../Three/Block/Block";
+import { useBlock } from "components/App/Three/Block/Block";
 
-import state from "../../Three/state";
+import state from "components/App/Three/state";
 
-import "../../Three/Material/CustomMaterial";
+import "components/App/Three/Material/CustomMaterial";
 
 const Plane = React.forwardRef(
   (

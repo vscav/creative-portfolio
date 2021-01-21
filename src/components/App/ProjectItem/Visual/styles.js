@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import model from "../../../../assets/images/model.jpg";
+import model from "assets/images/model.jpg";
 
 export const VisualWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.background};

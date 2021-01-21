@@ -1,10 +1,10 @@
 import * as React from "react";
 
-import { Block } from "../../Three/Block/Block";
-import Control from "../Control";
-import Dot from "../Dot";
+import { Block } from "components/App/Three/Block/Block";
+import Control from "components/App/Gallery/Control";
+import Dot from "components/App/Gallery/Dot";
 
-import state from "../../Three/state";
+import state from "components/App/Three/state";
 
 const navigation = [
   {

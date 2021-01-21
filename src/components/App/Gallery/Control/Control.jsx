@@ -3,13 +3,13 @@ import { useFrame } from "react-three-fiber";
 import lerp from "lerp";
 import { useDrag } from "react-use-gesture";
 
-import { DragPositionContext } from "../Map/Map";
+import { DragPositionContext } from "components/App/Gallery//Map/Map";
 
-import { useBlock } from "../../Three/Block/Block";
+import { useBlock } from "components/App/Three/Block/Block";
 
-import state from "../../Three/state";
+import state from "components/App/Three/state";
 
-import isClosest from "../../../../helpers/isClosest";
+import isClosest from "helpers/isClosest";
 
 const Control = () => {
   let positionsSet = React.useRef();

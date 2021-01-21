@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ThemeContext } from "styled-components";
 
-import Tooltip from "../../Tooltip";
+import Tooltip from "components/App/Tooltip";
 
 import { Toggle, ToggleContainer } from "./styles";
 
