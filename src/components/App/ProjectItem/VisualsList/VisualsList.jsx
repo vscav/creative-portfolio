@@ -8,6 +8,8 @@ const VisualsList = () => {
   return (
     <VisualsWrapper>
       <Visual />
+      <Visual full />
+      <Visual />
     </VisualsWrapper>
   );
 };
