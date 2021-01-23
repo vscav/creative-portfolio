@@ -3,8 +3,6 @@ import { normalize } from "styled-normalize";
 import { breakpoints } from "./breakpoints";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
-
   ${normalize}
 
   * {
@@ -31,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
         /* overscroll-behavior: none;
         overflow: hidden; */
         margin: 0;
-        font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        font-family: "Gilroy", -apple-system, BlinkMacSystemFont, "Segoe UI",
             "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
             "Helvetica Neue", sans-serif;
         -webkit-font-smoothing: antialiased;
