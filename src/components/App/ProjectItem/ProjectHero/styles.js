@@ -9,6 +9,7 @@ export const ProjectHeroContainer = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   justify-content: center;
@@ -35,6 +36,8 @@ export const ProjectHeroInfo = styled.div`
   position: relative;
   width: 100%;
   z-index: 0;
+  opacity: 1;
+  transition: opacity 0.375s ease-in-out;
 `;
 
 export const ProjectHeroTitle = styled.h1`
@@ -62,6 +65,22 @@ export const ProjectHeroCategory = styled.div`
       letter-spacing: 0;
       margin-top: 5px;
       text-transform: none;
+    }
+  }
+`;
+
+export const ScrollDown = styled.div`
+  position: absolute;
+  bottom: 90px;
+  width: 8px;
+  opacity: 1;
+  transition: opacity 0.375s ease-in-out;
+
+  > svg {
+    transform: rotate(90deg);
+
+    path {
+      fill: ${(props) => props.theme.colors.text};
     }
   }
 `;

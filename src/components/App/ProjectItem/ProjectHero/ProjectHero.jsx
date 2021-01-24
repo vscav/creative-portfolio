@@ -5,7 +5,10 @@ import {
   ProjectHeroInfo,
   ProjectHeroTitle,
   ProjectHeroCategory,
+  ScrollDown,
 } from "./styles";
+
+import Arrow from "components/App/Icons/Arrow";
 
 import model from "assets/images/model.jpg";
 
@@ -35,7 +38,7 @@ const ProjectHero = () => {
       />
       <ProjectHeroInfo
         style={{
-          opacity: `${1 - offset / 650}`,
+          opacity: `${1 - offset / 325}`,
           transform: `translateY(${offset * 0.8}px)`,
         }}
       >
@@ -45,6 +48,13 @@ const ProjectHero = () => {
           <span>Full stack development</span>
         </ProjectHeroCategory>
       </ProjectHeroInfo>
+      <ScrollDown
+        style={{
+          opacity: offset > 90 ? 0 : 1,
+        }}
+      >
+        <Arrow />
+      </ScrollDown>
     </ProjectHeroContainer>
   );
 };
