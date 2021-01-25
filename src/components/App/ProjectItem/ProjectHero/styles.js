@@ -4,7 +4,7 @@ export const ProjectHeroContainer = styled.div`
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
-  background-color: #111111;
+  background-color: ${(props) => props.theme.colors.background};
   color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,6 +26,8 @@ export const ProjectHeroParallax = styled.img`
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  opacity: 1;
+  transition: opacity 0.375s ease-in-out;
 `;
 
 export const ProjectHeroInfo = styled.div`

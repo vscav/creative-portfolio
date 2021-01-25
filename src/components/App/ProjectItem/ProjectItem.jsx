@@ -6,7 +6,7 @@ import ImageHero from "./ImageHero";
 import Information from "./Information";
 import VisualsList from "./VisualsList";
 
-const ProjectItem = () => {
+const ProjectItem = ({ project }) => {
   const animateRequest = React.useRef();
   const smoothScrollingContainer = React.useRef();
 
@@ -36,12 +36,29 @@ const ProjectItem = () => {
   }, [smoothScrolling]);
 
   return (
-    <div ref={smoothScrollingContainer} className="scroll">
-      <ProjectHero />
-      <Description />
-      <ImageHero />
-      <Information />
-      <VisualsList />
+    <div ref={smoothScrollingContainer}>
+      {project && (
+        <>
+          <ProjectHero
+            hero={project.hero}
+            name={project.name}
+            domain={project.domain}
+            expertise={project.expertise}
+          />
+          <Description
+            overview={project.overview}
+            description={project.description}
+          />
+          <ImageHero image={project.img} />
+          <Information
+            clients={project.clients}
+            technologies={project.technologies}
+            skills={project.skills}
+            date={project.date}
+          />
+          <VisualsList visuals={project.visuals} />
+        </>
+      )}
     </div>
   );
 };

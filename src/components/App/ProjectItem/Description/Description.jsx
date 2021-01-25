@@ -1,4 +1,7 @@
 import * as React from "react";
+import { Spring } from "react-spring/renderprops";
+
+import VisibilitySensor from "components/App/VisibilitySensor";
 
 import { Container, Flex } from "styles/global";
 import {
@@ -7,31 +10,27 @@ import {
   DescriptionText,
 } from "./styles";
 
-const Description = () => {
+const Description = (props) => {
   return (
     <Container>
       <Flex wrapper alignTop spaceBetween wrapping>
         <DescriptionContainer>
-          <DescriptionHeader>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            mollis at mi ac consectetur.
-          </DescriptionHeader>
+          <VisibilitySensor once partialVisibility>
+            {({ isVisible }) => (
+              <Spring delay={175} to={{ opacity: isVisible ? 1 : 0 }}>
+                {({ opacity }) => (
+                  <DescriptionHeader style={{ opacity }}>
+                    {props.overview}
+                  </DescriptionHeader>
+                )}
+              </Spring>
+            )}
+          </VisibilitySensor>
         </DescriptionContainer>
         <DescriptionContainer>
-          <DescriptionText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            mollis at mi ac consectetur. Duis justo urna, vulputate sed tellus
-            quis, cursus varius purus. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Morbi dapibus metus accumsan massa sollicitudin
-            semper. Suspendisse hendrerit ipsum a maximus commodo. Fusce ut quam
-            fermentum, faucibus neque tincidunt, placerat tellus. Phasellus
-            hendrerit auctor mi ac venenatis. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
-          </DescriptionText>
-          <DescriptionText>
-            Nullam eu ipsum magna. Etiam a quam ut magna cursus viverra vel ut
-            tellus.
-          </DescriptionText>
+          {props.description.map((paragraph, index) => (
+            <DescriptionText key={index}>{paragraph}</DescriptionText>
+          ))}
         </DescriptionContainer>
       </Flex>
     </Container>

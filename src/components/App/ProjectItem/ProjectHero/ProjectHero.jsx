@@ -1,4 +1,7 @@
 import * as React from "react";
+
+import Arrow from "components/App/Icons/Arrow";
+
 import {
   ProjectHeroContainer,
   ProjectHeroParallax,
@@ -8,11 +11,7 @@ import {
   ScrollDown,
 } from "./styles";
 
-import Arrow from "components/App/Icons/Arrow";
-
-import model from "assets/images/model.jpg";
-
-const ProjectHero = () => {
+const ProjectHero = (props) => {
   const [offset, setOffset] = React.useState(0);
 
   React.useEffect(() => {
@@ -30,9 +29,9 @@ const ProjectHero = () => {
   return (
     <ProjectHeroContainer>
       <ProjectHeroParallax
-        src={model}
+        src={require(`../../../../assets/images/${props.hero}.jpg`)}
         style={{
-          opacity: `${1 - offset / 950}`,
+          opacity: `${1 - offset / 425}`,
           transform: `translateY(${offset * 0.55}px)`,
         }}
       />
@@ -42,10 +41,10 @@ const ProjectHero = () => {
           transform: `translateY(${offset * 0.8}px)`,
         }}
       >
-        <ProjectHeroTitle>Wodabest</ProjectHeroTitle>
+        <ProjectHeroTitle>{props.name}</ProjectHeroTitle>
         <ProjectHeroCategory>
-          <span>Industry</span>
-          <span>Full stack development</span>
+          <span>{props.domain}</span>
+          <span>{props.expertise}</span>
         </ProjectHeroCategory>
       </ProjectHeroInfo>
       <ScrollDown

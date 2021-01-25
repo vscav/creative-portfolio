@@ -4,12 +4,16 @@ import Visual from "components/App/ProjectItem/Visual";
 
 import { VisualsWrapper } from "./styles";
 
-const VisualsList = () => {
+const VisualsList = (props) => {
   return (
     <VisualsWrapper>
-      <Visual />
-      <Visual full />
-      <Visual />
+      {props.visuals.map((visual, index) => (
+        <Visual
+          key={index}
+          src={require(`../../../../assets/images/${visual}.jpg`)}
+        />
+      ))}
+      {/* <Visual full /> */}
     </VisualsWrapper>
   );
 };
