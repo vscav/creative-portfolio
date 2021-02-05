@@ -13,9 +13,9 @@ const Project = ({ match }) => {
   React.useEffect(() => {
     Object.entries(projects).forEach((p) => {
       var title = [...p].shift();
-      if (title == match.params.slug) setCurrentProject(p[p.length - 1]);
+      if (title === match.params.slug) setCurrentProject(p[p.length - 1]);
     });
-  }, []);
+  }, [projects, match.params.slug]);
 
   // if (!currentProject) {
   //   return <Redirect to={routes.projects} />;

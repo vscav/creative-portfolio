@@ -4,6 +4,7 @@ const PaintLine = () => {
   return (
     <svg
       viewBox="0 0 15 2"
+      height="1"
       preserveAspectRatio="none"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

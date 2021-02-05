@@ -5,6 +5,7 @@ import Description from "./Description";
 import ImageHero from "./ImageHero";
 import Information from "./Information";
 import VisualsList from "./VisualsList";
+import Credits from "./Credits";
 
 const ProjectItem = ({ project }) => {
   const animateRequest = React.useRef();
@@ -57,6 +58,7 @@ const ProjectItem = ({ project }) => {
             date={project.date}
           />
           <VisualsList visuals={project.visuals} />
+          <Credits credits={project.credits} />
         </>
       )}
     </div>

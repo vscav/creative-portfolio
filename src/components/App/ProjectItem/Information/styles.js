@@ -14,7 +14,7 @@ export const InformationList = styled.ul`
 export const InformationTitle = styled.li`
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: ${(props) => props.theme.colors.grey};
+  color: ${(props) => props.theme.colors.darkGrey};
   font-size: 1.2em;
   @media (max-width: ${breakpoints.tablet}px) {
     font-size: 0.8em;

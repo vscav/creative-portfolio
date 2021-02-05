@@ -5,7 +5,7 @@ export const darkTheme = {
     background: "#111111",
     text: "#fafafa",
 
-    grey: "#747474",
+    darkGrey: "#747474",
   },
 };
 
@@ -16,6 +16,7 @@ export const lightTheme = {
     background: "#fafafa",
     text: "#111111",
 
-    grey: "#c3c6c8",
+    // darkGrey: "#c3c6c8",
+    darkGrey: "#747474",
   },
 };

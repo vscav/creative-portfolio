@@ -49,6 +49,11 @@ const projects = {
     hero: "model",
     visuals: ["model", "model"],
     link: "https://lit-drum-pad.herokuapp.com/",
+    credits: {
+      "Creative Director": "Steffen Christiansen",
+      "3D Artist": "Mike Lamont",
+      "Motion & 3D Designer": "Charlotte Lucas",
+    },
     next: 1,
   },
 };

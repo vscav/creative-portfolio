@@ -4,7 +4,7 @@ import { animated } from "react-spring";
 export const ProgressBarContainer = styled(animated.div)`
   width: 150px;
   height: 2px;
-  background-color: ${(props) => props.theme.colors.grey};
+  background-color: ${(props) => props.theme.colors.darkGrey};
 `;
 
 export const AnimatedProgressBar = styled(animated.div)`

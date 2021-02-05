@@ -41,7 +41,7 @@ const CursorCore = ({
       previousTimeRef.current = time;
       requestRef.current = requestAnimationFrame(animateOuterCursor);
     },
-    [requestRef]
+    [requestRef, coords.x, coords.y]
   );
 
   React.useEffect(() => {

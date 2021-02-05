@@ -21,7 +21,7 @@ export const DescriptionHeader = styled.p`
 `;
 
 export const DescriptionText = styled.p`
-  color: ${(props) => props.theme.colors.grey};
+  color: ${(props) => props.theme.colors.darkGrey};
   font-kerning: none;
   font-size: 1.2em;
   font-weight: 300;
