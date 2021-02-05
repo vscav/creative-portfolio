@@ -23,6 +23,11 @@ const projects = {
     hero: "model",
     visuals: ["model", "model", "model"],
     link: "https://github.com/vscav/wodabest-RESTful",
+    credits: {
+      "Creative Director": "Steffen Christiansen",
+      "3D Artist": "Mike Lamont",
+      "Motion & 3D Designer": "Charlotte Lucas",
+    },
     next: 2,
   },
   "lit-drum-pad": {

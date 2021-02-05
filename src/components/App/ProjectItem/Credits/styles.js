@@ -29,13 +29,13 @@ export const CreditsHeader = styled.div`
 `;
 
 export const CreditItemContainer = styled.div`
-  font-size: 1rem;
+  font-size: 0.825rem;
 `;
 
 export const CreditItem = styled.div`
   margin: 0;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 0.825rem;
+  padding-top: 0.825rem;
   @media (min-width: ${breakpoints.tablet}px) {
     margin-left: 16.66667%;
   }
@@ -47,8 +47,6 @@ export const CreditItem = styled.div`
 
 export const Separator = styled.div`
   display: block;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 1px;
 
